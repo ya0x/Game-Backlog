@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6B3912222FC004720066559E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B39121E2FC004720066559E /* Assets.xcassets */; };
+		6B3912232FC004720066559E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39121F2FC004720066559E /* ContentView.swift */; };
+		6B3912242FC004720066559E /* GameBacklogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3912202FC004720066559E /* GameBacklogApp.swift */; };
+		6B39122B2FC005160066559E /* GameBacklogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3912292FC005160066559E /* GameBacklogTests.swift */; };
+		6B3912302FC005190066559E /* GameBacklogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39122D2FC005190066559E /* GameBacklogUITests.swift */; };
+		6B3912312FC005190066559E /* GameBacklogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39122E2FC005190066559E /* GameBacklogUITestsLaunchTests.swift */; };
+		6B3912332FC005190066559E /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B39122C2FC005190066559E /* Config.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6B3912002FC001C10066559E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +37,15 @@
 		6B3911F22FC001C00066559E /* GameBacklog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameBacklog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3911FF2FC001C10066559E /* GameBacklogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameBacklogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3912092FC001C10066559E /* GameBacklogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameBacklogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B39121E2FC004720066559E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B39121F2FC004720066559E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B3912202FC004720066559E /* GameBacklogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBacklogApp.swift; sourceTree = "<group>"; };
+		6B3912292FC005160066559E /* GameBacklogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBacklogTests.swift; sourceTree = "<group>"; };
+		6B39122C2FC005190066559E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6B39122D2FC005190066559E /* GameBacklogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBacklogUITests.swift; sourceTree = "<group>"; };
+		6B39122E2FC005190066559E /* GameBacklogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBacklogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B3912372FC006E10066559E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		6B3911F42FC001C00066559E /* GameBacklog */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GameBacklog;
-			sourceTree = "<group>";
-		};
-		6B3912022FC001C10066559E /* GameBacklogTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GameBacklogTests;
-			sourceTree = "<group>";
-		};
-		6B39120C2FC001C10066559E /* GameBacklogUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GameBacklogUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6B3911EF2FC001C00066559E /* Frameworks */ = {
@@ -75,9 +75,10 @@
 		6B3911E92FC001C00066559E = {
 			isa = PBXGroup;
 			children = (
-				6B3911F42FC001C00066559E /* GameBacklog */,
-				6B3912022FC001C10066559E /* GameBacklogTests */,
-				6B39120C2FC001C10066559E /* GameBacklogUITests */,
+				6B39122C2FC005190066559E /* Config.xcconfig */,
+				6B3912212FC004720066559E /* GameBacklog */,
+				6B39122A2FC005160066559E /* GameBacklogTests */,
+				6B39122F2FC005190066559E /* GameBacklogUITests */,
 				6B3911F32FC001C00066559E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +91,34 @@
 				6B3912092FC001C10066559E /* GameBacklogUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6B3912212FC004720066559E /* GameBacklog */ = {
+			isa = PBXGroup;
+			children = (
+				6B3912372FC006E10066559E /* Info.plist */,
+				6B39121E2FC004720066559E /* Assets.xcassets */,
+				6B39121F2FC004720066559E /* ContentView.swift */,
+				6B3912202FC004720066559E /* GameBacklogApp.swift */,
+			);
+			path = GameBacklog;
+			sourceTree = "<group>";
+		};
+		6B39122A2FC005160066559E /* GameBacklogTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B3912292FC005160066559E /* GameBacklogTests.swift */,
+			);
+			path = GameBacklogTests;
+			sourceTree = "<group>";
+		};
+		6B39122F2FC005190066559E /* GameBacklogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B39122D2FC005190066559E /* GameBacklogUITests.swift */,
+				6B39122E2FC005190066559E /* GameBacklogUITestsLaunchTests.swift */,
+			);
+			path = GameBacklogUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +135,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				6B3911F42FC001C00066559E /* GameBacklog */,
 			);
 			name = GameBacklog;
 			packageProductDependencies = (
@@ -130,9 +156,6 @@
 			dependencies = (
 				6B3912012FC001C10066559E /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				6B3912022FC001C10066559E /* GameBacklogTests */,
-			);
 			name = GameBacklogTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +175,6 @@
 			);
 			dependencies = (
 				6B39120B2FC001C10066559E /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				6B39120C2FC001C10066559E /* GameBacklogUITests */,
 			);
 			name = GameBacklogUITests;
 			packageProductDependencies = (
@@ -212,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3912222FC004720066559E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3912332FC005190066559E /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3912232FC004720066559E /* ContentView.swift in Sources */,
+				6B3912242FC004720066559E /* GameBacklogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B39122B2FC005160066559E /* GameBacklogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3912302FC005190066559E /* GameBacklogUITests.swift in Sources */,
+				6B3912312FC005190066559E /* GameBacklogUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +417,7 @@
 		};
 		6B3912142FC001C10066559E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B39122C2FC005190066559E /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,6 +425,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameBacklog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -421,6 +450,7 @@
 		};
 		6B3912152FC001C10066559E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B39122C2FC005190066559E /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,6 +458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameBacklog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
