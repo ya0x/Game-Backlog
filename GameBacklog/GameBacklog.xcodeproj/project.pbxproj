@@ -14,6 +14,9 @@
 		6B3912302FC005190066559E /* GameBacklogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39122D2FC005190066559E /* GameBacklogUITests.swift */; };
 		6B3912312FC005190066559E /* GameBacklogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39122E2FC005190066559E /* GameBacklogUITestsLaunchTests.swift */; };
 		6B3912332FC005190066559E /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B39122C2FC005190066559E /* Config.xcconfig */; };
+		6B3912472FC219E70066559E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3912462FC219E70066559E /* NetworkManager.swift */; };
+		6B3912492FC28E010066559E /* RAWGService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3912482FC28E010066559E /* RAWGService.swift */; };
+		6BF7F7CB2FC93C220060053C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF7F7CA2FC93C220060053C /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		6B39122D2FC005190066559E /* GameBacklogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBacklogUITests.swift; sourceTree = "<group>"; };
 		6B39122E2FC005190066559E /* GameBacklogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBacklogUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6B3912372FC006E10066559E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6B3912462FC219E70066559E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6B3912482FC28E010066559E /* RAWGService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWGService.swift; sourceTree = "<group>"; };
+		6BF7F7CA2FC93C220060053C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +81,10 @@
 		6B3911E92FC001C00066559E = {
 			isa = PBXGroup;
 			children = (
-				6B39122C2FC005190066559E /* Config.xcconfig */,
 				6B3912212FC004720066559E /* GameBacklog */,
 				6B39122A2FC005160066559E /* GameBacklogTests */,
 				6B39122F2FC005190066559E /* GameBacklogUITests */,
+				6B39122C2FC005190066559E /* Config.xcconfig */,
 				6B3911F32FC001C00066559E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +102,11 @@
 		6B3912212FC004720066559E /* GameBacklog */ = {
 			isa = PBXGroup;
 			children = (
+				6B39123D2FC219340066559E /* App */,
+				6B39123C2FC2192C0066559E /* Core */,
+				6B39123B2FC219230066559E /* Features */,
+				6B39123A2FC219140066559E /* Components */,
+				6B3912392FC219060066559E /* Resources */,
 				6B3912372FC006E10066559E /* Info.plist */,
 				6B39121E2FC004720066559E /* Assets.xcassets */,
 				6B39121F2FC004720066559E /* ContentView.swift */,
@@ -119,6 +130,108 @@
 				6B39122E2FC005190066559E /* GameBacklogUITestsLaunchTests.swift */,
 			);
 			path = GameBacklogUITests;
+			sourceTree = "<group>";
+		};
+		6B3912392FC219060066559E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B39123A2FC219140066559E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6B39123B2FC219230066559E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6B3912452FC219690066559E /* Home */,
+				6B3912442FC219630066559E /* Search */,
+				6B3912432FC2195C0066559E /* Details */,
+				6B3912422FC219560066559E /* Backlog */,
+				6B3912412FC219510066559E /* Favorites */,
+				6B3912402FC2194B0066559E /* Profile */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6B39123C2FC2192C0066559E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6B39123F2FC219420066559E /* Networking */,
+				6B39123E2FC2193B0066559E /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6B39123D2FC219340066559E /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6B39123E2FC2193B0066559E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BF7F7CA2FC93C220060053C /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B39123F2FC219420066559E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6B3912462FC219E70066559E /* NetworkManager.swift */,
+				6B3912482FC28E010066559E /* RAWGService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6B3912402FC2194B0066559E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6B3912412FC219510066559E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		6B3912422FC219560066559E /* Backlog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backlog;
+			sourceTree = "<group>";
+		};
+		6B3912432FC2195C0066559E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		6B3912442FC219630066559E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6B3912452FC219690066559E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +328,9 @@
 			);
 			mainGroup = 6B3911E92FC001C00066559E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6B3912382FC00A7E0066559E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6B3911F32FC001C00066559E /* Products */;
 			projectDirPath = "";
@@ -259,6 +375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3912232FC004720066559E /* ContentView.swift in Sources */,
+				6B3912472FC219E70066559E /* NetworkManager.swift in Sources */,
+				6B3912492FC28E010066559E /* RAWGService.swift in Sources */,
+				6BF7F7CB2FC93C220060053C /* Game.swift in Sources */,
 				6B3912242FC004720066559E /* GameBacklogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +720,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B3912382FC00A7E0066559E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 6B3911EA2FC001C00066559E /* Project object */;
 }

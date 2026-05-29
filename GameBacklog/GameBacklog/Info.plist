@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>RAWG_ACCESS_TOKEN</key>
-	<string>$(RAG_ACCESS_TOKEN)</string>
+	<string>$(RAWG_ACCESS_TOKEN)</string>
 </dict>
 </plist>
