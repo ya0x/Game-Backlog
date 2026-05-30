@@ -5,8 +5,8 @@ struct PlatformContainer: Codable {
 }
 
 struct Platform: Codable {
-    let id: Int
-    let name: String
+    let id: Int?
+    let name: String?
 }
 
 struct Game: Codable {
@@ -15,7 +15,7 @@ struct Game: Codable {
     let released: String?
     let backgroundImage: String?
     let rating: Double
-    let platforms: [PlatformContainer]
+    let platforms: [PlatformContainer]?
     
     enum CodingKeys: String, CodingKey {
         case id
