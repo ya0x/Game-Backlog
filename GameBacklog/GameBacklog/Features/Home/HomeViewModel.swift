@@ -16,34 +16,30 @@ class HomeViewModel: ObservableObject {
         self.service = service
     }
     
-    func loadData() {
+    @MainActor
+    func loadData() async {
         errorMessage = ""
         isLoading = true
         
-        Task {
-            do {
-                async let topRated = service.fetchTopRated()
-                async let trending = service.fetchTrending()
-                async let popular = service.fetchPopular()
-                async let upcoming = service.fetchUpcoming()
-                async let recentRelease = service.fetchRecentRelease()
-                let (t, tr, p, u, r) = try await (topRated, trending, popular, upcoming, recentRelease)
-                
-                await MainActor.run {
-                    topRatedGames = t
-                    trendingGames = tr
-                    popularGames = p
-                    upcomingGames = u
-                    recentReleaseGames = r
-                    isLoading = false
-                }
-            } catch {
-                await MainActor.run {
-                    errorMessage = error.localizedDescription
-                    print("Error: \(error)")
-                    isLoading = false
-                }
-            }
+        do {
+            async let topRated = service.fetchTopRated()
+            async let trending = service.fetchTrending()
+            async let popular = service.fetchPopular()
+            async let upcoming = service.fetchUpcoming()
+            async let recentRelease = service.fetchRecentRelease()
+            let (t, tr, p, u, r) = try await (topRated, trending, popular, upcoming, recentRelease)
+            
+            topRatedGames = t
+            trendingGames = tr
+            popularGames = p
+            upcomingGames = u
+            recentReleaseGames = r
+            isLoading = false
+            
+        } catch {
+            errorMessage = error.localizedDescription
+            print("Error: \(error)")
+            isLoading = false
         }
     }
 }

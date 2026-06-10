@@ -28,8 +28,11 @@ struct HomeView: View {
                     sectionView(title: "Recent Releases", games: viewModel.recentReleaseGames)
                 }
             }
-            .onAppear {
-                viewModel.loadData()
+            .task {
+                await viewModel.loadData()
+            }
+            .navigationDestination(for: Int.self) { id in
+                GameDetailView(id: id)
             }
         }
     }
