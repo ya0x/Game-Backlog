@@ -46,4 +46,10 @@ class RAWGService {
         let response: GameDetail = try await NetworkManager.shared.fetch(url: url)
         return response
     }
+    
+    func fetchGameSeries(id: Int) async throws -> [Game] {
+        let url = URL(string: "\(baseURL)/games/\(id)/game-series?key=\(accessToken)&page_size=100")!
+        let response: GamesResponse = try await NetworkManager.shared.fetch(url: url)
+        return response.results
+    }
 }
