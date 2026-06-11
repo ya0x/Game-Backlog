@@ -18,6 +18,18 @@ struct GameDetailView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 250)
                     .clipped()
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(viewModel.screenshots, id: \.id) { screenshot in
+                            KFImage(URL(string: screenshot.image))
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 250, height: 140)
+                                .clipped()
+                                .cornerRadius(8)
+                        }
+                    }
+                }
                 VStack {
                     Text("⭐\(String(format: "%.1f", game.rating))")
                         .font(.caption2)

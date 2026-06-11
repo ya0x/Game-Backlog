@@ -51,3 +51,12 @@ struct ESRBRating: Codable {
     let id: Int
     let name: String
 }
+
+struct Screenshot: Codable {
+    let id: Int
+    let image: String
+}
+
+struct ScreenshotsResponse: Codable {
+    let results: [Screenshot]
+}

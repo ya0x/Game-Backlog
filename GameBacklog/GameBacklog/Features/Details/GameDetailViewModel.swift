@@ -4,6 +4,7 @@ import Combine
 class GameDetailViewModel: ObservableObject {
     @Published var game: GameDetail?
     @Published var gameS: [Game] = []
+    @Published var screenshots: [Screenshot] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
     
@@ -21,9 +22,11 @@ class GameDetailViewModel: ObservableObject {
         do {
             async let gameDetail = service.fetchGameDetail(id: id)
             async let gameSeries = service.fetchGameSeries(id: id)
-            let (detail, series) = try await (gameDetail, gameSeries)
+            async let screenShots = service.fetchScreenshots(id: id)
+            let (detail, series, screen) = try await (gameDetail, gameSeries, screenShots)
             game = detail
             gameS = series
+            screenshots = screen
             isLoading = false
         } catch {
             errorMessage = error.localizedDescription
