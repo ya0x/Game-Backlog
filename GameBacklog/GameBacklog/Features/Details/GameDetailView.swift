@@ -42,6 +42,16 @@ struct GameDetailView: View {
                         .padding(.bottom, 16)
                     Text(game.released ?? "TBA")
                     Text(game.descriptionRaw ?? "No description available")
+                    HStack {
+                        Text(game.publishers?.map(\.name).joined(separator: ", ") ?? "")
+                            .padding(4)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(4)
+                        Text(game.developers?.map(\.name).joined(separator: ", ") ?? "")
+                            .padding(4)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(4)
+                    }
                 }
                 ScrollView(.horizontal) {
                     HStack {
